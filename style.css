@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway';
+    height: 100vh;
+}
+
+#tophead-container{
+    background: #43425D;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+}
+
+
+.chatsession{
+    flex: 30%;
+    padding: 0 20px
+}
+
+.chatdetail{
+    flex: 70%;
+    padding: 0 20px;
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+
+#next-container{
+    display: flex;
+    align-items: center;
+}
+
+.people{
+    height: 100vh;
+    flex: 30%;
+}
+
+.chat-on{
+    height: 100vh;
+    flex: 70%;
+}
+
+.user{
+    background: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.user:hover{
+    background-color: rgba(200,200,200,0.1);
+    cursor: pointer;
+}
+
+.dp img{
+    margin: 0 10px 0 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.name-chat{
+    flex: 70%;
+}
+
+h3{
+    font-size: 15px;
+}
+
+.name-chat p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.name-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h5{
+    font-weight: 100;
+}
+
+.chat-on{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+.profile-display{
+    width: 100%;
+    height: 95px;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center; 
+    background-color: rgba(200,200,200,0.2);
+}
+
+.dp-detail{
+    position: relative;
+}
+
+.dp-detail img{
+    margin: 0 20px 0 35px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+.on-status{
+    position: absolute;
+    top: 62px;
+    left: 80px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: #00E278;
+}
+
+.name-status{
+    padding: 20px;
+}
+
+.name-status h2{
+    margin-bottom: 5px;
+}
+
+.typearea{
+    width: 100%;
+    height: 95px;
+    padding: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.conversation{
+    height: 300px;
+    font-size: 12px;
+    position: relative;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+
+.recieved{
+    max-width: 50%;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+.sent{
+    max-width: 50%;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+}
+
+.recieved{
+    background-color: rgba(200,200,200,0.2);
+    border-radius: 20px 20px 20px 0;
+    padding: 20px;
+}
+
+.sent{
+    background-color: rgba(30,144,255,1);
+    border-radius: 20px 20px 0 20px;
+    padding: 20px;
+    color: white;
+}
+
+.ip{
+    background-color: rgba(200,200,200,0.2);
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    border: none;
+    background: none;
+    width: 100%;
+}
+
+button{
+    width: 50px;
+    border: none;
+    background-color: #43425D;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+
+
+
+
+
