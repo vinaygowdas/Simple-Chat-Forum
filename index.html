@@ -6,6 +6,7 @@
     <title>Enterprise Bot Test</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -26,7 +27,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eveniet.</p>
                     </div>
                 </div>
-                <div class="user user2">
+                <div onclick="clkFunction()" class="user user2">
                     <div class="dp u2"><img src="./images/u2.jpg" alt="u2"></div>
                     <div class="name-chat">
                         <div class="name-time"><h3>Tony Stark</h3><h5>13 min ago</h5></div>
@@ -109,7 +110,50 @@
                     </div>
                 </div>
             </div>
+            <div class="chat-on2">
+                <div class="profile-display">
+                    <div class="dp-detail">
+                        <img src="./images/u2.jpg" alt="u2">
+                        <div class="on-status"></div>
+                    </div>
+                    <div class="name-status">
+                        <h2 class="username">Tony Stark</h2>
+                        <p class="status">Smart, Entreprenuer, Singer</p>
+                    </div>
+                </div>
+                <div class="conversation">
+                    <div class="recieved">
+                        <p><span>Hey lets go for a movie.</span></p>
+                    </div>
+                    <div class="sent">
+                        <p><span>Im so busy dude! Lets do it tommorow.</span></p>
+                    </div>
+                </div>
+                <div class="typearea">
+                    <div class="ip">
+                        <input type="text" placeholder="type a message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    
+    <script>     
+        $(document).ready(function(){
+            $(".user2").click(function(){
+                $(".chat-on2").show();
+                $(".chat-on").hide();
+            });
+        });
+        
+        $(document).ready(function(){
+            $(".user1").click(function(){
+                $(".chat-on").show();
+                $(".chat-on2").hide();
+            });
+        });
+    </script>
 </body>
 </html>
