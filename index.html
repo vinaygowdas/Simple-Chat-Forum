@@ -20,14 +20,14 @@
         </div>
         <div id="next-container">
             <div class="people">
-                <div class="user user1">
+                <div class="user userA">
                     <div class="dp u1"><img src="./images/u1.jpg" alt="u1"></div>
                     <div class="name-chat">
                         <div class="name-time"><h3>John Mayers</h3><h5>10 min ago</h5></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eveniet.</p>
                     </div>
                 </div>
-                <div onclick="clkFunction()" class="user user2">
+                <div class="user userB">
                     <div class="dp u2"><img src="./images/u2.jpg" alt="u2"></div>
                     <div class="name-chat">
                         <div class="name-time"><h3>Tony Stark</h3><h5>13 min ago</h5></div>
@@ -58,7 +58,7 @@
                 <div class="user user6">
                     <div class="dp u2"><img src="./images/u6.jpg" alt="u6"></div>
                     <div class="name-chat">
-                        <div class="name-time"><h3>Trump</h3><h5>10 min ago</h5></div>
+                        <div class="name-time"><h3>Conor</h3><h5>10 min ago</h5></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eveniet.</p>
                     </div> 
                 </div>
@@ -69,7 +69,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eveniet.</p>
                     </div>
                 </div>
-                <div class="user user1">
+                <div class="user user8">
                     <div class="dp u2"><img src="./images/u8.jpg" alt="u8"></div>
                     <div class="name-chat">
                         <div class="name-time"><h3>Maria</h3><h5>1 day ago</h5></div>
@@ -79,7 +79,7 @@
                 <div class="user user9">
                     <div class="dp u2"><img src="./images/u9.jpg" alt="u9"></div>
                     <div class="name-chat">
-                        <div class="name-time"><h3>Josheph</h3><h5>1 week ago</h5></div>
+                        <div class="name-time"><h3>Emma</h3><h5>1 week ago</h5></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eveniet.</p>
                     </div>
                 </div>
@@ -96,12 +96,9 @@
                     </div>
                 </div>
                 <div class="conversation">
-                    <div class="recieved">
-                        <p><span>Hi, how can I help you?</span></p>
-                    </div>
-                    <div class="sent">
-                        <p><span>Hey there, I've really slow internet connection.. After going through plans from XYZ I love to switch my connection.. Can I get the information for differnet packages.</span></p>
-                    </div>
+                <div id="convA">
+                    
+                </div>
                 </div>
                 <div class="typearea">
                     <div class="ip">
@@ -122,12 +119,9 @@
                     </div>
                 </div>
                 <div class="conversation">
-                    <div class="recieved">
-                        <p><span>Hey lets go for a movie.</span></p>
-                    </div>
-                    <div class="sent">
-                        <p><span>Im so busy dude! Lets do it tommorow.</span></p>
-                    </div>
+                <div id="convB">
+                    
+                </div>
                 </div>
                 <div class="typearea">
                     <div class="ip">
@@ -140,20 +134,51 @@
     </div>
     
     
-    <script>     
+    <script>
+
+// Conversation One fetching to #convA 
+        
+        $(document).ready(function() {
+           $.getJSON("chatData.json", function(obj) {
+               var chatA =[];
+               var str = '';
+               obj.data['chat1'].forEach(ch=>str+='<div class="'+ch.from.type+'">'+ch.msg.message+'</div>')
+               chatA.push(str)
+               
+               $("#convA").html(chatA.join(''));
+           });
+        });
+        
+        
+// Conversation Two fetching to #convB
+        
+        $(document).ready(function() {
+           $.getJSON("chatData.json", function(obj) {
+               var chatB =[];
+               var str = '';
+               obj.data['chat2'].forEach(ch=>str+='<div class="'+ch.from.type+'">'+ch.msg.message+'</div>')
+               chatB.push(str)
+               
+               $("#convB").html(chatB.join(''));
+           });
+        });
+        
+                      
         $(document).ready(function(){
-            $(".user2").click(function(){
+            $(".userB").click(function(){
                 $(".chat-on2").show();
                 $(".chat-on").hide();
             });
         });
         
         $(document).ready(function(){
-            $(".user1").click(function(){
+            $(".userA").click(function(){
                 $(".chat-on").show();
                 $(".chat-on2").hide();
             });
         });
+        
+                   
     </script>
 </body>
 </html>

@@ -62,6 +62,7 @@ h1{
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
 }
 
 .user:hover{
@@ -106,15 +107,15 @@ h5{
 }
 
 .chat-on{
-    display: flex;
+    display: block;
     flex-direction: column;
-    border-left: 1px solid rgba(0,0,0,0.1);
+/*    border-left: 1px solid rgba(0,0,0,0.1);*/
 }
 
 .chat-on2{
     display: none;
     flex-direction: column;
-    border-left: 1px solid rgba(0,0,0,0.1);
+/*    border-left: 1px solid rgba(0,0,0,0.1);*/
 }
 
 .profile-display{
@@ -161,46 +162,43 @@ h5{
 .typearea{
     width: 100%;
     height: 95px;
-    padding: 20px;
+    padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 
+/*COnversation Tweaks S here*/
+
 .conversation{
-    height: 300px;
+    height: 450px;
     font-size: 12px;
     position: relative;
     padding: 35px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     line-height: 1.5;
 }
 
-.recieved{
-    max-width: 50%;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-}
+/*COnversation Tweaks E here*/
 
-.sent{
-    max-width: 50%;
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-}
-
-.recieved{
+.user1{
+    display: inline-block;
     background-color: rgba(200,200,200,0.2);
     border-radius: 20px 20px 20px 0;
-    padding: 20px;
+    padding: 12px 25px 12px 25px;
+    margin-bottom: 10px;
+    margin-right: 55%;
 }
 
-.sent{
-    background-color: rgba(30,144,255,1);
+.user2{
+    float: right;
+    display: inline-block;
+    background-color: dodgerblue;
     border-radius: 20px 20px 0 20px;
-    padding: 20px;
+    padding: 12px 25px 12px 25px;
     color: white;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-left: 55%;
 }
 
 .ip{
@@ -234,5 +232,83 @@ button:hover{
 }
 
 
+@media screen and (max-width: 480px) {
+    .chatsession {
+        padding: 0 2px;
+        text-align: center;
+    }
+    .chatsession h1{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .people{
+        height: 100vh;
+        overflow-x: hidden;
+        flex: 30%;
+    }
+    .user{
+        display: flex;
+        justify-content: center;
+        background: white;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    .name-chat{
+        display: none;   
+    }
+    .dp img{
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .profile-display{
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: flex-start;
+        align-items:center; 
+        background-color: rgba(200,200,200,0.2);
+    }
 
+    .dp-detail{
+        position: relative;
+    }
+
+    .dp-detail img{
+        margin: 0 10px 0 35px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;  
+    }
+    .on-status{
+        position: absolute;
+        top: 42px;
+        left: 76px;
+        height: 10px;
+        width: 10px;
+        border-radius: 50px;
+        background-color: #00E278;
+    }
+    .name-status{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .conversation{
+        height: 600px;
+        font-size: 12px;
+        position: relative;
+        padding: 25px 10px ;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+}
 
